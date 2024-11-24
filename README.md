@@ -1,4 +1,4 @@
-# 👋 Hello, I'm **@wahyusudrajad**
+# 👋 Hello, I'm **Wahyu Sudrajad**
 
 I am a **Full Stack Developer** passionate about building high-quality, scalable, and user-friendly web applications. With extensive experience in both front-end and back-end technologies, I am always eager to learn and collaborate on innovative projects.
 
