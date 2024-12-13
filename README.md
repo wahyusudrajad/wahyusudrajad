@@ -48,10 +48,10 @@ I'm looking to collaborate on projects that solve real-world problems, particula
 
 ### 📫 **How to Reach Me**
 
-- **Portfolio**: [Visit My Portfolio](https://your-portfolio.com)
+- **Portfolio**: [Visit My Portfolio](https://wahyusudrajad.github.io/website-portofolio/)
 - **LinkedIn**: [linkedin.com/in/wahyusudrajad](https://linkedin.com/in/wahyusudrajad)
 - **Twitter**: [@wahyusudrajad](https://twitter.com/wahyusudrajad)
-- **Email**: [youremail@example.com](mailto:youremail@example.com)
+- **Email**: [wahyusudrajad18@gmail.com](mailto:wahyusudrajad18@gmail.com)
 
 ---
 
