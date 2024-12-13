@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahyu Sudrajad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .konten {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nama {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .moto {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .tombol-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tombol {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tombol:hover {
+            background-color: #3e8e41;
+        }
+
+        .link-medsos {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .link-medsos a {
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .link-medsos a:hover {
+            color: #3e8e41;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .notifikasi {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            animation: fadeout 4s forwards;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        @keyframes fadeout {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+    <script>
+        // URL API
+        const apiUrl = "https://api-bdc.net/data/client-ip";
+
+        // Fungsi untuk menampilkan notifikasi
+        function tampilkanNotifikasi(ip, tipe) {
+            const notifikasi = document.createElement('div');
+            notifikasi.className = 'notifikasi';
+            notifikasi.innerHTML = `Ip Anda <br> ${ip} `;
+            document.body.appendChild(notifikasi);
+
+            // Hapus notifikasi setelah beberapa detik
+            setTimeout(() => {
+                notifikasi.remove();
+            }, 4000);
+        }
+
+        // Mengambil data IP menggunakan Fetch API
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Tampilkan notifikasi dengan data IP
+                tampilkanNotifikasi(data.ipString, data.ipType);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    </script>
+</head>
+<body>
+    <div class="konten">
+        <img src="logo.png" class="logo" alt="Logo">
+        <h1 class="nama">WAHYU SUDRAJAD</h1>
+        <p class="moto">"Hi there, I'm Wahyu Sudrajad. I am a teenage backend developer, I like learning programming languages, especially JavaScript"</p>
+        <div class="tombol-container">
+            <button class="tombol" onclick="window.location.href='https://wahyusudrajad.github.io/website-portofolio/';">Portofolio</button>
+            <button class="tombol" onclick="window.location.href='https://github.com/wahyusudrajad?tab=repositories';">Repository</button>
+            <button class="tombol" onclick="window.location.href='https://www.wahyuofficial.my.id';">Website</button>
+        </div>
+        <div class="link-medsos">
+            <a href="https://www.facebook.com/profile.php?id=61551003269847&mibextid=JRoKGi">Facebook</a>
+            <a href="https://x.com/wahyusudrajad02?t=-VNsIPtXpkvZ999optWn7Q&s=09">Twitter</a>
+            <a href="https://www.instagram.com/xr_wahyuu">Instagram</a>
+        </div>
+        <p class="copyright">&copy; 2025 Wahyu Sudrajad</p>
+    </div>
+</body>
+</html>
